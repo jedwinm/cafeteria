@@ -1,6 +1,15 @@
 import { type PageProps } from "$fresh/server.ts";
 import Header from "../components/layout/Header.tsx";
 
+
+import Provider from "../lib/utils/provider.ts";
+import getDatabase from "../lib/utils/db.ts";
+import UsuarioRepo from "../lib/repositories/UsuarioRepo.ts";
+
+new Provider();
+Provider.set('db', await getDatabase());
+Provider.set('repo:usuario', new UsuarioRepo());
+
 export default function App({ Component }: PageProps) {
   return (
     <html>

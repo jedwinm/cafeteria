@@ -4,7 +4,7 @@ export enum EstadoUsuario {
 }
 
 export interface UsuarioConstructor {
-    id: number;
+    id: number | null;
     fechaCreacion: Date | number;
     estado: EstadoUsuario | number;
     nombres: string;
@@ -15,7 +15,7 @@ export interface UsuarioConstructor {
 }
 
 export default class Usuario {
-    public id: number;
+    public id: number | null;
     public fechaCreacion: Date;
     public estado: EstadoUsuario;
     public nombres: string;
