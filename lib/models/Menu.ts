@@ -1,5 +1,5 @@
 interface MenuConstructor {
-    id: number;
+    id: number | null;
     precio: number;
     descripcion: string;
     imagen: string;
@@ -7,7 +7,7 @@ interface MenuConstructor {
 }
 
 export default class Menu {
-    public id: number;
+    public id: number | null;
     public precio: number;
     public descripcion: string;
     public imagen: string;

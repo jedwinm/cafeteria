@@ -3,7 +3,7 @@ import UsuarioAutenticable from "./UsuarioAutenticable.ts";
 import Cliente from "./Cliente.ts";
 
 export interface FacturaConstructor{
-    id: number;
+    id: number | null;
     pedido: Pedido;
     cajero: UsuarioAutenticable;
     cliente: Cliente;
@@ -13,7 +13,7 @@ export interface FacturaConstructor{
 }
 
 export default class Factura{
-    public id: number;
+    public id: number | null;
     public pedido: Pedido;
     public cajero: UsuarioAutenticable;
     public cliente: Cliente;

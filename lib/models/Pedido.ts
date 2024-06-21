@@ -4,7 +4,7 @@ import Mesero from "./Mesero.ts";
 
 
 interface PedidoConstructor{
-    id: number;
+    id: number | null;
     productosPedido: ProductosPedidos[];
     fecha: Date | number;
     mesero: Mesero;
@@ -13,7 +13,7 @@ interface PedidoConstructor{
 }
 
 export default class Pedido{
-    public id: number;
+    public id: number | null;
     public productosPedido: ProductosPedidos[];
     public fecha: Date | number;
     public mesero: Mesero;

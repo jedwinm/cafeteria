@@ -1,7 +1,7 @@
 import Menu from "./Menu.ts";
 
 interface ProductosPedidosConstructor{
-    id: number;
+    id: number | null;
     menu: Menu;
     fecha: Date | number;
     cantidad: number;
@@ -9,7 +9,7 @@ interface ProductosPedidosConstructor{
 }
 
 export default class ProductosPedidos {
-    public id: number;
+    public id: number | null;
     public menu: Menu;
     public fecha: Date;
     public cantidad: number;

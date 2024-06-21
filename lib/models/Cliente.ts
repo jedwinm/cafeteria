@@ -2,7 +2,7 @@ import Factura from "./Factura.ts";
 import Usuario from "./Usuario.ts";
 
 interface UsuarioConstructor{
-    id: number;
+    id: number | null;
     usuario: Usuario;
     fechaUltimaVisita: Date | number;
 }
@@ -10,12 +10,12 @@ interface UsuarioConstructor{
 
 
 export default class Cliente{
-    public id: number;
+    public id: number | null;
     public usuario: Usuario;
     public fechaUltimaVisita: Date | number;
 
     constructor(params: UsuarioConstructor){
-        this.id = params.id;
+        this.id = params.id ;
         this.usuario = params.usuario;
         this.fechaUltimaVisita = params.fechaUltimaVisita;
 
