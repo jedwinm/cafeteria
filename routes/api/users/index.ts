@@ -3,7 +3,7 @@ import UsuarioRepo from "../../../lib/repositories/UsuarioRepo.ts";
 import Provider from "../../../lib/utils/provider.ts";
 
 export const handler = async (_req: Request, _ctx: HandlerContext) => {
-  const userRepo: UsuarioRepo = Provider.get("repo:usuario");
+  const userRepo = Provider.get<UsuarioRepo>("repo:usuario");
 
   const user = await userRepo.readById(1);
   if (!user) {

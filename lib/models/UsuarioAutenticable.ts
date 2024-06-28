@@ -43,4 +43,11 @@ export default class UsuarioAutenticable extends Usuario {
     public forzarElCambioContrasena() {
         this.forzarCambioContrasena = true;
     }
+
+    public obtenerParametrosDB() {
+        return {
+            contrasena: this.contrasena,
+            forzarCambioContrasena: this.forzarCambioContrasena,
+        };
+    }
 }
